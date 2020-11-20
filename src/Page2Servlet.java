@@ -54,8 +54,18 @@ public class Page2Servlet extends HttpServlet {
 			st.setString(3, sNumB);
 			
 			st.executeUpdate();
+			
+			if(!sNumA.equals(sNumB)) {
+				
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.jsp");
 			rd.forward(request, response);
+			
+			}else{
+				
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page1.5.jsp");
+			rd.forward(request, response);
+	
+		}
 			
 		}catch(SQLException e) {
 			System.out.println("SQLException");
