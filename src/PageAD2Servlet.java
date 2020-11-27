@@ -1,6 +1,10 @@
 
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,23 +12,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.ResultSet;
-import java.sql.PreparedStatement;
-import java.sql.Connection;
 
 /**
  * Servlet implementation class Page1Servlet
  */
-@WebServlet("/page1")
-public class Page1Servlet extends HttpServlet {
+@WebServlet("/pageAD2")
+public class PageAD2Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Page1Servlet() {
+    public PageAD2Servlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,29 +37,35 @@ public class Page1Servlet extends HttpServlet {
 		final String id = "OUBO";
 		final String pass = "TOUSEN";
 		
-		new java.util.Date();
-		
+		String sNumY = request.getParameter("numY");
+		String sNumM = request.getParameter("numM");
+		String sNumD = request.getParameter("numD");
+		String sNumYMD = sNumY+sNumM+sNumD;
+
 		try {
 			Class.forName(driverName);
 			Connection connection=DriverManager.getConnection(url,id,pass);
-			PreparedStatement st;
-			st = connection.prepareStatement(
-					"select trunc(kigen-sysdate+1) as result from kigen"
-					);
-			 
-			ResultSet rs = st.executeQuery();//DBアクセス
-			rs.next();
-			String kigen = rs.getString("result");
-			request.setAttribute("Result", kigen);
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page1.jsp");
+			PreparedStatement st = 
+					connection.prepareStatement(
+							"Update kigen　set kigen = to_date(?,'YYYYMMDD')"
+						);
+			
+			st.setString(1, sNumYMD);
+			
+			st.executeUpdate();//update処理もexecuteUpdate
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/pageAD2.jsp");
 			rd.forward(request, response);
 			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		}catch(SQLException e) {
+			System.out.println("SQLException");
+			response.getWriter().println("SQLException");
 			e.printStackTrace();
+			e.printStackTrace(response.getWriter());
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			System.out.println("ClassNotFoundException");
+			response.getWriter().println("ClassNotFoundException");
 			e.printStackTrace();
+			e.printStackTrace(response.getWriter());
 		}
 	}
 

@@ -9,6 +9,20 @@
 <body>
 <h1>仙台駅前第一デパート　セール抽選会　受付会場</h1>
 
+<%
+String Kigen = (String)request.getAttribute("Result");
+%>
+<%
+int num = Integer.parseInt(Kigen);
+%>
+<% 
+		if(num<=10){
+%>
+<p>応募期限まであと <%=Kigen %> 日</p>
+<%
+		}
+%>
+
 <form method="post" action="./page2">
 応募者のメールアドレス<input type="email" name="email" placeholder="メールアドレスを入力" /><br/>
 7桁の数字A<input type="number" name="numa" placeholder="7桁の数字A" /><br/>
