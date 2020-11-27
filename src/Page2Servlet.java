@@ -33,33 +33,19 @@ public class Page2Servlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		final String driverName = "oracle.jdbc.driver.OracleDriver";
-		final String url = "jdbc:oracle:thin:@192.168.54.226:1521/orcl";
-		final String id = "OUBO";
-		final String pass = "TOUSEN";
 		
 		String sEname = request.getParameter("email");
 		String sNumA = request.getParameter("numa");
 		String sNumB = request.getParameter("numb");
 
-		try {
-			Class.forName(driverName);
-			Connection connection=DriverManager.getConnection(url,id,pass);
-			PreparedStatement st = 
-					connection.prepareStatement(
-							"Insert into OUBO Values(?,?,?)"
-						);
-			st.setString(1, sEname);
-			st.setString(2, sNumA);
-			st.setString(3, sNumB);
-			
-			st.executeUpdate();
-			
+		request.setAttribute("emailK",sEname);
+		request.setAttribute("numaK",sNumA);
+		request.setAttribute("numbK",sNumB);
+		
 			if(!sNumA.equals(sNumB)) {
 				
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/pageK.jsp");
 			rd.forward(request, response);
-			
 			}else{
 				
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page1.5.jsp");
@@ -67,17 +53,6 @@ public class Page2Servlet extends HttpServlet {
 	
 		}
 			
-		}catch(SQLException e) {
-			System.out.println("SQLException");
-			response.getWriter().println("SQLException");
-			e.printStackTrace();
-			e.printStackTrace(response.getWriter());
-		} catch (ClassNotFoundException e) {
-			System.out.println("ClassNotFoundException");
-			response.getWriter().println("ClassNotFoundException");
-			e.printStackTrace();
-			e.printStackTrace(response.getWriter());
-		}
 	}
 
 }
