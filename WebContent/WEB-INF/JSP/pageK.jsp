@@ -28,6 +28,7 @@ String NUMB = (String)request.getAttribute("numbK");
 </form>
 
 <button onclick="location.href='./page1'">戻る</button>
+
 </body>
 
 </html>
