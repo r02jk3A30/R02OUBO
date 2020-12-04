@@ -6,6 +6,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,6 +36,7 @@ public class Page2Servlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
 		String sEname = request.getParameter("email");
 		String sNumA = request.getParameter("numa");
 		String sNumB = request.getParameter("numb");
@@ -41,6 +44,8 @@ public class Page2Servlet extends HttpServlet {
 		request.setAttribute("emailK",sEname);
 		request.setAttribute("numaK",sNumA);
 		request.setAttribute("numbK",sNumB);
+			
+		
 		
 			if(!sNumA.equals(sNumB)) {
 				
