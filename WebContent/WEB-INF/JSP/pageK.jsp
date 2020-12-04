@@ -13,17 +13,18 @@
 String EMAIL = (String)request.getAttribute("emailK");
 String NUMA = (String)request.getAttribute("numaK");
 String NUMB = (String)request.getAttribute("numbK");
+String SYS = (String)request.getAttribute("SysK");
 %>
 
 メールアドレス：<%= EMAIL%><br/>
 番号1:<%= NUMA%><br/>
 番号2:<%= NUMB%><br/>
 
-<form method="post" action="./pageK">
 
+<form method="post" action="./pageK">
 <input type="hidden" name="email" value="<%= EMAIL%>">
-<input type="hidden" name="numa" value="<%= NUMB%>">
-<input type="hidden" name="numb" value="<%= NUMA%>">
+<input type="hidden" name="numa" value="<%= NUMA%>">
+<input type="hidden" name="numb" value="<%= NUMB%>">
 <input type="submit" value="進む">
 </form>
 
