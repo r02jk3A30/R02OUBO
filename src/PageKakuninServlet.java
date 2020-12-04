@@ -12,7 +12,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 /**
@@ -25,7 +26,7 @@ public class PageKakuninServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PageKakuninServlet() {
+	public PageKakuninServlet()  {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,13 +44,16 @@ public class PageKakuninServlet extends HttpServlet {
 		String sEname = request.getParameter("email");
 		String sNumA = request.getParameter("numa");
 		String sNumB = request.getParameter("numb");
-
+		
+		
+		
+		
 		try {
 			Class.forName(driverName);
 			Connection connection=DriverManager.getConnection(url,id,pass);
 			PreparedStatement st = 
 					connection.prepareStatement(
-							"Insert into OUBO Values(?,?,?)"
+							"Insert into OUBO Values(?,?,?,sysdate)"
 						);
 			st.setString(1, sEname);
 			st.setString(2, sNumA);
