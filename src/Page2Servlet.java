@@ -46,11 +46,24 @@ public class Page2Servlet extends HttpServlet {
 		request.setAttribute("numbK",sNumB);
 			
 		
+		  
+		String[] NUM = sNumA.split("");
+		int sum =0;
+		for(int i=0; i<NUM.length; i++) {
+			sum = sum + Integer.parseInt(NUM[i]);
+			
+		}
+		
 		
 			if(!sNumA.equals(sNumB)) {
 				
+				if(sum%9 == 0) {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/pageK.jsp");
 			rd.forward(request, response);
+				}else {
+					RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page1.5.5.jsp");
+					rd.forward(request, response);
+				}
 			}else{
 				
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page1.5.jsp");
