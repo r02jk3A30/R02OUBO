@@ -60,7 +60,8 @@
 
 </form>
 
- 
+<p><a href="Valentine">バレンタインセール</a></p>
+<p><a href="Nyugaku">新入学セール</a></p>
 
 </body>
-</html>l>
+</html>
