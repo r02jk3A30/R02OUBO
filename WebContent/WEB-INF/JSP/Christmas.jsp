@@ -21,6 +21,19 @@
 
 <br>
 <h1 style="text-align:center">仙台駅前第一デパート　クリスマスセール　受付会場</h1>
+<%
+String Kigen = (String)request.getAttribute("Result");
+%>
+<%
+int num = Integer.parseInt(Kigen);
+%>
+<% 
+		if(num<=10){
+%>
+<p>応募期限まであと <%=Kigen %> 日</p>
+<%
+		}
+%>
 <br><br><br><br><br><br><br><br><br><br>
 <br>
 
