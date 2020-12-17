@@ -52,5 +52,8 @@ int num = Integer.parseInt(Kigen);
 
 </form>
 
+<p><a href="Christmas">クリスマスセール</a></p>
+<p><a href="Valentine">バレンタインセール</a></p>
+
 </body>
 </html>
