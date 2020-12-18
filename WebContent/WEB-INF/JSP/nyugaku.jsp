@@ -16,7 +16,7 @@
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<h1 style="text-align:center"><font color="#b22222">🎉</font>仙台駅前第一デパート　新入学セール　受付会場<font color="#b22222">🎉</font></h1>
+<h1 style="text-align:center">仙台駅前第一デパート<br><font color="#b22222">🎉</font>新入学セール　受付会場<font color="#b22222">🎉</font></h1>
 <%
 String Kigen = (String)request.getAttribute("Result");
 %>
@@ -26,7 +26,7 @@ int num = Integer.parseInt(Kigen);
 <% 
 		if(num<=10){
 %>
-<p>応募期限まであと <%=Kigen %> 日</p>
+<h2 style="text-align:center"><font color=#ffb6c1>応募期限まであと <%=Kigen %> 日</font></h2>
 <%
 		}
 %>
@@ -55,6 +55,7 @@ int num = Integer.parseInt(Kigen);
 
 <p><a href="Christmas">クリスマスセール</a></p>
 <p><a href="Valentine">バレンタインセール</a></p>
+<p><a href="javascript:void(0)">新入学セール</a></p>
 
 <p style="text-align:right;"><a href="page5">入力画面(5コ)</a></p>
 
