@@ -56,5 +56,7 @@ int num = Integer.parseInt(Kigen);
 <p><a href="Christmas">クリスマスセール</a></p>
 <p><a href="Valentine">バレンタインセール</a></p>
 
+<p style="text-align:right;"><a href="page5">入力画面(5コ)</a></p>
+
 </body>
 </html>
