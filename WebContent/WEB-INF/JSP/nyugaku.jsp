@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<body bgcolor="#fffaf0" text="#ff00ff">
+<body bgcolor="#fff0f5" text="#ff7f50">
 
 <body style="background-image:url(file:///Z:/git/R02OUBO/WebContent/WEB-INF/image/nyugaku.png)">
 <body style=".resizeimage width:100%;" >
