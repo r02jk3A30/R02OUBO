@@ -16,7 +16,7 @@
 
 <br><br><br><br><br><br><br><br><br>
 
-<h1>仙台駅前第一デパート　バレンタインセール抽選会　受付会場</h1>
+<h1 style="text-align:center"><font color="#a0522d">🍩</font>仙台駅前第一デパート　バレンタインセール抽選会　受付会場<font color="#a0522d">🍩</font></h1>
 <%
 String Kigen = (String)request.getAttribute("Result");
 %>

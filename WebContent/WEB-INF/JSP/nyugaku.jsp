@@ -16,7 +16,7 @@
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<h1>仙台駅前第一デパート　新入学セール　受付会場</h1>
+<h1 style="text-align:center"><font color="#b22222">🎉</font>仙台駅前第一デパート　新入学セール　受付会場<font color="#b22222">🎉</font></h1>
 <%
 String Kigen = (String)request.getAttribute("Result");
 %>
