@@ -10,7 +10,7 @@
 
  
 
-<body bgcolor="#ffe4e1" text="#fafad2">
+<body bgcolor="#b22222" text="#fafad2">
 
  
 
@@ -35,9 +35,6 @@ int num = Integer.parseInt(Kigen);
 		}
 %>
 <br><br><br><br><br><br><br><br><br><br>
-<br>
-
- 
 
 <form method="post" action="./page2">
 

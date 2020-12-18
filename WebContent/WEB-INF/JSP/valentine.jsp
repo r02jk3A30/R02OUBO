@@ -13,7 +13,7 @@
 <body style="background-image:url(file:///Z:/git/R02OUBO/WebContent/WEB-INF/image/haikei.png)">
 <body style=".resizeimage width:100%;" >
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
 <h1 style="text-align:center">仙台駅前第一デパート　バレンタインセール抽選会　受付会場</h1>
 <%
