@@ -3,24 +3,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <title>クリスマスセール</title>
+
+<link rel="stylesheet" href="Z:\git\R02OUBO\WebContent\css\style.css" type="text/css">
+
 </head>
 <body>
 
- 
-
-<body bgcolor="#b22222" text="#fafad2">
+<body id="diagonal-gradient" bgcolor="#b22222" text="#fafad2">
 
  
 
 <body style="background-image:url(file:///Z:/git/R02OUBO/WebContent/WEB-INF/image/Christmas.jpg)">
 <body style=".resizeimage width:100%;" >
 
- 
-
 <br>
-<h1 style="text-align:center">仙台駅前第一デパート　クリスマスセール　受付会場</h1>
+
+<h1>仙台駅前第一デパート　クリスマスセール　受付会場</h1>
+
 <%
 String Kigen = (String)request.getAttribute("Result");
 %>
@@ -65,8 +67,6 @@ int num = Integer.parseInt(Kigen);
 
 <input type="submit" value="登録する" style="width:100px;height:50px"/>
 </div>
-
- 
 
 </form>
 
