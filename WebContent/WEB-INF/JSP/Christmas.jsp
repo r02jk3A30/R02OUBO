@@ -21,7 +21,7 @@
 
 <br>
 
-<h1 style="text-align:center"><font color="#ffffff">🎅</font>仙台駅前第一デパート　クリスマスセール　受付会場<font color="#ffffff">🎅</font></h1>
+<h1 style="text-align:center">仙台駅前第一デパート<br><font color="#ffffff">🎅</font>クリスマスセール　受付会場<font color="#ffffff">🎅</font></h1>
 
 <%
 String Kigen = (String)request.getAttribute("Result");
@@ -32,11 +32,11 @@ int num = Integer.parseInt(Kigen);
 <% 
 		if(num<=10){
 %>
-<p>応募期限まであと <%=Kigen %> 日</p>
+<h2 style="text-align:center"><font color=#00ffff>応募期限まであと <%=Kigen %> 日</font></h2>
 <%
 		}
 %>
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
 <form method="post" action="./page2">
 
@@ -70,6 +70,7 @@ int num = Integer.parseInt(Kigen);
 
 </form>
 
+<p><a href="javascript:void(0)">クリスマスセール</a></p>
 <p><a href="Valentine">バレンタインセール</a></p>
 <p><a href="Nyugaku">新入学セール</a></p>
 
