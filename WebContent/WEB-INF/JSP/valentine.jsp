@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="Z:\git\R02OUBO\WebContent\css\style.css" type="text/css">
 <title>バレンタインセール</title>
 </head>
 <body>
@@ -13,9 +14,9 @@
 <body style="background-image:url(file:///Z:/git/R02OUBO/WebContent/WEB-INF/image/haikei.png)">
 <body style=".resizeimage width:100%;" >
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
-<h1 style="text-align:center">仙台駅前第一デパート　バレンタインセール抽選会　受付会場</h1>
+<h1 style="text-align:center">仙台駅前第一デパート<br><font color="#a0522d">🍩</font>バレンタインセール抽選会　受付会場<font color="#a0522d">🍩</font></h1>
 <%
 String Kigen = (String)request.getAttribute("Result");
 %>
@@ -25,7 +26,7 @@ int num = Integer.parseInt(Kigen);
 <% 
 		if(num<=10){
 %>
-<p>応募期限まであと <%=Kigen %> 日</p>
+<h2 style="text-align:center"><font color=#ff1493>応募期限まであと <%=Kigen %> 日</font></h2>
 <%
 		}
 %>
@@ -53,7 +54,10 @@ int num = Integer.parseInt(Kigen);
 </form>
 
 <p><a href="Christmas">クリスマスセール</a></p>
+<p><a href="javascript:void(0)">バレンタインセール</a></p>
 <p><a href="Nyugaku">新入学セール</a></p>
+
+<p style="text-align:right;"><a href="page5">入力画面(5コ)</a></p>
 
 </body>
 </html>
